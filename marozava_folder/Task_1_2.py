@@ -1,0 +1,6 @@
+x = int(input("Введите первое число: "))
+y = int(input("Введите второе число: "))
+mod1 = abs(x)
+mod2 = abs(y)
+result = (mod1 - mod2) / (1 + mod1*mod2)
+print("Результат:", result)
