@@ -1,0 +1,5 @@
+a = int(input("a:"))
+b = int(input("b:"))
+print("sum = ", a+b)
+print("p = ", a*b)
+print("s = ", a-b)
