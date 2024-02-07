@@ -1,0 +1,7 @@
+print("Домашка 1. Задача 2 c модулями")
+print("Введи число x")
+x = float(input())
+print("Введи число y")
+y = float(input())
+z = (abs(x) + abs(y))/(1 + abs((x * y)))
+print(f"Ответ\n {z}")
