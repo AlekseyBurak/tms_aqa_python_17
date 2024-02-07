@@ -1,0 +1,5 @@
+print(f"Summa == {(a := float(input('Задача1:\nВведите а '))) + (b := float(input("Введите b "))) }\nRaznost == {a -b}\nProizvedenie == {a * b} ")
+print(f"Rezultat == {(abs(x := float(input('Задача2:\nВведите x '))) - abs(y := float(input("Введите y ")))) / (1 + abs(x * y))}")
+print(f"Objom kuba == {(a := int(input('Задача 3:\nВведите ребро куба: '))) ** 3}\nPloshad bokov == {4 * a ** 2}")
+print(f"Sr arifm == {((a := float(input('Задача4:\nВведите а '))) + (b := float(input("Введите b ")))) / 2}\nSr geom =={(a * b) ** 0.5}")
+print(f"Hipotenuza == {((a := int(input('Задача 5:\nВведите катет а: '))) ** 2 + (b := float(input("Введите катет b: "))) ** 2) ** 0.5}\nPloshad treugol == {a *b / 2}")
