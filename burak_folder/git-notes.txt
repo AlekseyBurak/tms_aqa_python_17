@@ -65,3 +65,5 @@ git revert HEAD (отменяет последний коммит)
 
 после этого последовательность коммитов будетвыглядеть как-то так
 ----"wrong commit"-------"revert wrong commit"---->
+
+eroefk;fewq;eg3rqiohegr3qnjklegrfwqioegiegkewg
