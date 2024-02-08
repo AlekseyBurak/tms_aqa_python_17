@@ -11,3 +11,5 @@ print(f"Avg aryth == {((a := int(input('Enter a '))) + (b := int(input('Enter b 
 
 
 print(f"Hypo == {((a := int(input('Enter a '))) ** 2 + (b := int(input('Enter b '))) ** 2) ** 0.5}\nS == {a * b / 2}")
+
+# just for PR
