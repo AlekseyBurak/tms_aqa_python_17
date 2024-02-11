@@ -61,3 +61,14 @@ print(bool(-1))  # все что не 0 - это True
 print(bool("0"))  # строка с символами - True
 print(bool(""))   # строка пустая - False
 
+m = 10
+n = True
+
+print(f"Переменная {m} это то же самое, что и {n}")
+print(f"Переменная {m} это то же самое, что и {'True' if n else 'False'}")
+
+# TODO print("ку-ку")
+
+"""
+This is how it works.
+"""
