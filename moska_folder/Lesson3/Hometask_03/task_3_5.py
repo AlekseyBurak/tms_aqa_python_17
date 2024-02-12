@@ -4,3 +4,5 @@
 
 a = input("Input letter\n")
 print(ord(a))
+print(isinstance(a, int))
+print(type(a))
