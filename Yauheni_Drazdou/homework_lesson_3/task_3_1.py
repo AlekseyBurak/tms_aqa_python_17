@@ -1,2 +1,3 @@
-s = "www.my_site.com#about"
-print(s.replace('#', '/'))
+# task: in the string sub "#" for "/"
+a = "www.my_site.com#about"
+print(a.replace("#", "/"))
