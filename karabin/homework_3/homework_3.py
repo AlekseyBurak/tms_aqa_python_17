@@ -1,20 +1,35 @@
-a = {
-    'EUR' : 1,
-    'CAD' : 0.75,
-    'BYN' : 0.32
-}
+ url = "www.my_site.com#about"
+# url = url.replace('#' , '/')
+# print(url)
 
-b = {
-    'EUR' : 2,
-    'CAD' : 1.23,
-    'RUB' : 0.12
-}
+# string = input("Enter verb\n: ")
+# print(string + "ing")
 
-new_a = a.copy()
-new_b = b.copy()
+# string = input("Enter what you want\n:")
+# string = (" " + string + " ")
+# print(string.strip())
 
-new_a.update(b)
-new_b.update(a)
+# import math
+# a = int(input("Enter your number\n: "))
+# if a > 0 and a < 256:
+#     print(chr(a))
+# else:
+#     print("Try again")
 
-print(new_a)
-print(new_b)
+# import math
+# letter = input("Enter your letter A-z\n: ")
+# print("Result:", round(ord(letter)**.5 / len(str(ord(letter))), 2))
+
+# import math
+# a = int(input("Enter your number\n: "))
+# if a < 10000 and a > 999:
+#     b = a // 1000
+#     print("Тысячные:", b)
+#     c = a % (b * 1000) // 100
+#     print("Сотые:", c)
+#     d = a % (b * 1000 + c * 100 ) // 10
+#     print("Десятые:", d)
+#     e = a % (b * 1000 + c * 100 + d * 10) % 10
+#     print("Единицы:", e)
+# else:
+#     print("Try again")
