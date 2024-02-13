@@ -18,8 +18,7 @@
 # a = [1, 5, 2, 9, 2, 9, 1]
 # print(min(a, key = a.count))
 
-
-
-
-
-
+# import re
+# string = input("Enter what you want\n: ")
+# letter = "".join(re.findall("[A-z]+", string))
+# print(max(letter, key = letter.count).lower())
