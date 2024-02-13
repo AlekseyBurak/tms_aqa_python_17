@@ -10,10 +10,15 @@
 # list = ["I", "love", "arrays", "they", "are", "my", "favorite"]
 # print(" ".join(list))
 
-# list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-# list[3] = 11
+# list = list(range(1, 10))
+# list[2] = 11
 # deleted_number = list.pop(5)
 # print(list)
+
+# a = [1, 5, 2, 9, 2, 9, 1]
+# print(min(a, key = a.count))
+
+
 
 
 
