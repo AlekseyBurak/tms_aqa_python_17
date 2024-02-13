@@ -1,5 +1,5 @@
 def convert(string):
-    li = list(string.split())
-    return li
+    list2 = list(string.split())
+    return list2
 str1 = input()
 print(convert(str1))
