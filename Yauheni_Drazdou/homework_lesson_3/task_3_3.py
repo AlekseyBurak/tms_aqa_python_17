@@ -1,3 +1,4 @@
-print("Type a few words here")
-w = str(input())
-print(w.lstrip())
+# delete space from string
+print("Type something with space at the beginning and end")
+line = str(input())
+print(line.strip())
