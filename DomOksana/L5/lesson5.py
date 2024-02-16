@@ -33,5 +33,14 @@ print()
 print(dict_from_zip)
 dict_from_zip.update (zip_obj)
 print(dict_from_zip)
+# hfyljv
+import random
+
+from datetime import datetime
+
+
+print(random.randint(1, 2))
+print(datetime.now())
+
 
 
