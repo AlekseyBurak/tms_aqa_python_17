@@ -1,5 +1,7 @@
-# Суть: Я раздаю диллеру и игроку по две карту, одну ссверху и одну снизу, что не имеет значение
-# После создаю цикл while True
+# Суть: Сначала дается две карты диллеру и игроку, карты диллера мы не видим
+#  Спрашиваем, желаем ли еще взять карту, если да то обнуляем очки и добавляем карту и пересчитываем очки
+# Брать карту придумал только черз while True: по-другому не хватило фантазии
+# После того как перестали брать, считаем очки диллера и игрока, и там куча условий на сверку
 
 import random
 
@@ -57,13 +59,14 @@ for card in player_hand:
         player_score += scores[card[0]]
 print(f"Your cards is {player_hand}\n and your scope is {player_score}")
 
-print(scores)
+
 while True:
     question = input("Do you want to add card? enter any value enter any value other than yes if no ").lower()
     # добавляем карту диллеру
     if question == "yes" or question == "y" or question ==  "+":
         for _ in range(1):
             dealer_hand.append(all_cards.pop(-1))
+
         dealer_score = 0
         for card in dealer_hand:
             if card.startswith("10"):
@@ -73,6 +76,7 @@ while True:
         for _ in range(1):
             for _ in range(1):
                 player_hand.append(all_cards.pop(-1))
+
         player_score = 0
         for card in player_hand:
             if card.startswith("10"):
