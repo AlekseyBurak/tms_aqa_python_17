@@ -57,11 +57,11 @@ for card in player_hand:
         player_score += scores[card[0]]
 print(f"Your cards is {player_hand}\n and your scope is {player_score}")
 
-
+print(scores)
 while True:
     question = input("Do you want to add card? enter any value enter any value other than yes if no ").lower()
     # добавляем карту диллеру
-    if question in "yes" "y" "+":
+    if question == "yes" or question == "y" or question ==  "+":
         for _ in range(1):
             dealer_hand.append(all_cards.pop(-1))
         dealer_score = 0
@@ -86,32 +86,34 @@ while True:
 print(f"your score {player_score} and your cards {player_hand} ")
 print(f"dealer's score {dealer_score} and dealer cards {dealer_hand}")
 print("-"*15 + "Results" + "-" * 15)
-# проверка результата
-if player_score > 21 and dealer_score > 21:
-    if player_score < dealer_score:
-        print(f" You have {player_score}\n delaer has {dealer_score}\n You win!") # work
-    elif player_hand > dealer_hand:
-        print(f" You have {player_score}\n delaer has {dealer_score}\n You lose!") # work
-    # последняя проверка срабаотывает невсегда
-    else:
+
+
+#блок проверки если у обоих больше 21 - работает все верно
+if (player_score >= 21 and dealer_score > 21) or (player_score > 21 and dealer_score >= 21): # work
+    if player_score == dealer_score: #work
         print(f" You have {player_score}\n delaer has {dealer_score}\n You and dealer has the same points!")
-elif player_score < 21 and dealer_score < 21:
-    if player_score < dealer_score:
-        print(f" You have {player_score}\n delaer has {dealer_score}\n You lose!") #work
-    # данная проверка срабаотывает не всегда
-    elif player_hand > dealer_hand:
+    elif player_score > dealer_score: #work
+        print(f" You have {player_score}\n delaer has {dealer_score}\n You lose!")
+    elif player_score < dealer_score:# work
         print(f" You have {player_score}\n delaer has {dealer_score}\n You win!")
-    # срабаотывает тоже не всегда
-    else:
+
+
+#блок если у обоих меньше 21 - работает все верно
+elif (player_score <= 21 and dealer_score < 21) or (player_score < 21 and dealer_score <= 21) : # work
+    if player_score == dealer_score: #work
         print(f" You have {player_score}\n delaer has {dealer_score}\n You and dealer has the same points!")
-elif player_score < 21 and dealer_score > 21: # work
-    print(f" You have {player_score}\n delaer has {dealer_score}\n You win!")
-elif player_score > 21 and dealer_score < 21: # work
+    elif player_score > dealer_score: #work
+        print(f" You have {player_score}\n delaer has {dealer_score}\n You win!")
+    elif player_score < dealer_score:# work
+        print(f" You have {player_score}\n delaer has {dealer_score}\n You lose!")
+
+# блок если у обоих 21
+elif player_score == 21 and dealer_score == 21: # work
+    print(f" You have {player_score}\n delaer has {dealer_score}\n You and dealer has the same points!")
+elif player_score > 21 and dealer_score <= 21:
     print(f" You have {player_score}\n delaer has {dealer_score}\n You lose!")
-elif player_score == 21 and dealer_score != 21:
+elif player_score <= 21 and dealer_score > 21: # work
     print(f" You have {player_score}\n delaer has {dealer_score}\n You win!")
-elif player_score != 21 and dealer_score == 21:
-    print(f" You have {player_score}\n delaer has {dealer_score}\n You lose!")
 
 
 
