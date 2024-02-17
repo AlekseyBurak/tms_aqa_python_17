@@ -2,7 +2,7 @@
 # генерация числа компьютером
 import random
 computer_player = random.sample("123456789",4)
-print(f"Генерируемое число компьютером было: ", int("".join(computer_player)))
+#print(f"Генерируемое число компьютером было: ", int("".join(computer_player)))
 # пользователь вводит число
 player = int(input("Введите 4ех значное число, без повторяющихся чисел: "))
 # находим количество быков и коров
@@ -20,10 +20,10 @@ else:
                     bulls +=1
                 else:
                     cows +=1
-while bulls < 4:
-    player = int(input("Введите 4ех значное число, без повторяющихся чисел: "))
-else:
-    print(f"Генерируемое число компьютером было: ", int("".join(computer_player)))
-#print(f"cows: {cows}")
-#print(f"bulls: {bulls}")
-
+#while computer_player != player:
+    #player = int(input("Введите 4ех значное число, без повторяющихся чисел: "))
+#else:
+    #print(f"Генерируемое число компьютером было: ", int("".join(computer_player)))
+print(f"cows: {cows}")
+print(f"bulls: {bulls}")
+print(f"Генерируемое число компьютером было: ", int("".join(computer_player)))
