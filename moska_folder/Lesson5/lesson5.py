@@ -61,4 +61,3 @@ print(f"{dealer_hand} -- dealer score = {dealer_score}\n")
 print(f"{player_hand} -- player_score = {player_score}\n")
 
 print(f"{'Dealer win' if dealer_score >= player_score and dealer_score <= 21 else 'Player win'}")
-
