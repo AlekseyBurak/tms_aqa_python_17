@@ -6,7 +6,7 @@
 import random
 
 # создаем значения карты
-cards = [str(i) for i in range(1, 11)] + ['J', 'Q', 'K', 'A']
+cards = [str(i) for i in range(10, 11)] + ['J', 'Q', 'K', 'A']
 suits = ("Diamonds", "Hearts", "Clubs", "Spades",)
 all_cards = []
 for card in cards:
@@ -84,6 +84,26 @@ while True:
             else:
                 player_score += scores[card[0]]
         print(f"Your cards is {player_hand}\n and your scope is {player_score}")
+        if player_score >= 21:
+            player_score = 0
+            for card in player_hand:
+                if card.startswith("10"):
+                    player_score += 10
+                elif card.startswith("A"):
+                    player_score += 1
+                else:
+                    player_score += scores[card[0]]
+            print(f"Your cards is {player_hand}\n and your scope is {player_score}")
+            break
+        if dealer_score >= 21:
+            dealer_score = 0
+            for card in dealer_hand:
+                if card.startswith("10"):
+                    dealer_score += 10
+                elif card.startswith("A"):
+                    dealer_score += 1
+                else:
+                    dealer_score += scores[card[0]]
     else:
         break
 
@@ -100,6 +120,8 @@ if (player_score >= 21 and dealer_score > 21) or (player_score > 21 and dealer_s
         print(f" You have {player_score}\n delaer has {dealer_score}\n You lose!")
     elif player_score < dealer_score:# work
         print(f" You have {player_score}\n delaer has {dealer_score}\n You win!")
+    else:
+        print("bug")
 
 
 #блок если у обоих меньше 21 - работает все верно
@@ -110,6 +132,8 @@ elif (player_score <= 21 and dealer_score < 21) or (player_score < 21 and dealer
         print(f" You have {player_score}\n delaer has {dealer_score}\n You win!")
     elif player_score < dealer_score:# work
         print(f" You have {player_score}\n delaer has {dealer_score}\n You lose!")
+    else:
+        print("bug")
 
 # блок если у обоих 21
 elif player_score == 21 and dealer_score == 21: # work
@@ -118,7 +142,8 @@ elif player_score > 21 and dealer_score <= 21:
     print(f" You have {player_score}\n delaer has {dealer_score}\n You lose!")
 elif player_score <= 21 and dealer_score > 21: # work
     print(f" You have {player_score}\n delaer has {dealer_score}\n You win!")
-
+else:
+    print("bug")
 
 
 
