@@ -6,7 +6,7 @@
 import random
 
 # создаем значения карты
-cards = [str(i) for i in range(10, 11)] + ['J', 'Q', 'K', 'A']
+cards = [str(i) for i in range(2, 11)] + ['J', 'Q', 'K', 'A']
 suits = ("Diamonds", "Hearts", "Clubs", "Spades",)
 all_cards = []
 for card in cards:
