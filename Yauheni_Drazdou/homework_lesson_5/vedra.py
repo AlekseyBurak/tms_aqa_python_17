@@ -18,8 +18,6 @@ if command == "3":
 
 print(vedra)
 
-x = 5 - vedra["V5"]
-
 while vedra["V5"] != 4:
     command = input("Press 1 if you want to fill up V3\n"
                     "Press 2 if you want to fill up V5\n"
@@ -33,18 +31,17 @@ while vedra["V5"] != 4:
 
     if command == "1":
         vedra["V3"] = 3
-    print(vedra)
+
     if command == "2":
         vedra["V5"] = 5
-    print(vedra)
 
     if command == "3":
         vedra["V3"] = 0
-    print(vedra)
+
 
     if command == "4":
         vedra["V5"] = 0
-    print(vedra)
+
 
     if command == "5":
         vedra["V5"] += vedra["V3"]
@@ -54,7 +51,7 @@ while vedra["V5"] != 4:
         if vedra["V5"] > 5:
             vedra["V3"] = vedra["V3"] - x
             vedra["V5"] = 5
-    print(vedra)
+
 
     if command == "6":
         vedra["V3"] += vedra["V5"]
@@ -66,7 +63,7 @@ while vedra["V5"] != 4:
     print(vedra)
 
 else:
- print(f"{vedra}\n Good job!!! Bucket V5 got 5 litters, done")
+ print(f"{vedra}\n Good job!!! Bucket V5 got 4 litters, done")
 
 
 
