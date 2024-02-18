@@ -91,8 +91,6 @@ while True:
         dealer_hand.append(add_one_card_for_dealer)
 
         print(f"Your cards is {player_hand}\n and your scope is {player_score}")
-        print(f"dealer {dealer_hand} and {dealer_score}")
-
         if player_score >= 21:
             break
 
