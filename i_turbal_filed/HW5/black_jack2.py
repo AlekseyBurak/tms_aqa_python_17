@@ -148,6 +148,3 @@ else:
 
 
 
-
-# 16 11 - the same 14 16 17 8 - lose - сравнения
-# 15 18 - win 17 13 - nothing 18 10 - nothing 19 - 7
