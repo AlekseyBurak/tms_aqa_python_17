@@ -18,7 +18,7 @@ for _ in range(5):
     random.shuffle(all_cards)
 # create scope for cards
 
-
+scores = {}
 for card in cards:
     if card.isdigit():
         scores[card] = int(card)
