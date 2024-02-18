@@ -58,52 +58,44 @@ for card in player_hand:
     else:
         player_score += scores[card[0]]
 print(f"Your cards is {player_hand}\n and your scope is {player_score}")
+print("--"* 50)
 
 
 while True:
     question = input("Do you want to add card? enter any value enter any value other than yes if no ").lower()
     # добавляем карту диллеру
-    if question == "yes" or question == "y" or question ==  "+":
-        for _ in range(1):
-            dealer_hand.append(all_cards.pop(-1))
-
-        dealer_score = 0
-        for card in dealer_hand:
-            if card.startswith("10"):
-                dealer_score += 10
+    if question == "yes" or question == "y" or question == "+":
+        add_one_card_for_player = all_cards.pop(-1)
+        add_one_card_for_dealer = all_cards.pop(-1)
+        if (((add_one_card_for_player.startswith("10") or not add_one_card_for_dealer.startswith("10"))
+                and (add_one_card_for_dealer.startswith("10") or not add_one_card_for_player.startswith("10")))
+                and (add_one_card_for_dealer.startswith("10") or (add_one_card_for_player.startswith("10")))):
+            player_score += 10
+            dealer_score += 10
+        elif (((add_one_card_for_player.startswith("A") or not add_one_card_for_dealer.startswith("A"))
+              and (add_one_card_for_dealer.startswith("A") or not add_one_card_for_player.startswith("A")))
+              and (add_one_card_for_dealer.startswith("A") or add_one_card_for_player.startswith("A"))):
+            if player_score >= 20:
+                player_score += 1
             else:
-                dealer_score += scores[card[0]]
-        for _ in range(1):
-            for _ in range(1):
-                player_hand.append(all_cards.pop(-1))
+                player_score += 11
 
-        player_score = 0
-        for card in player_hand:
-            if card.startswith("10"):
-                player_score += 10
+            if dealer_score >= 20:
+                dealer_score += 1
             else:
-                player_score += scores[card[0]]
+                dealer_score += 11
+        else:
+            player_score += scores[add_one_card_for_player[0]]
+            dealer_score += scores[add_one_card_for_dealer[0]]
+        player_hand.append(add_one_card_for_player)
+        dealer_hand.append(add_one_card_for_dealer)
+
         print(f"Your cards is {player_hand}\n and your scope is {player_score}")
+        print(f"dealer {dealer_hand} and {dealer_score}")
+
         if player_score >= 21:
-            player_score = 0
-            for card in player_hand:
-                if card.startswith("10"):
-                    player_score += 10
-                elif card.startswith("A"):
-                    player_score += 1
-                else:
-                    player_score += scores[card[0]]
-            print(f"Your cards is {player_hand}\n and your scope is {player_score}")
             break
-        if dealer_score >= 21:
-            dealer_score = 0
-            for card in dealer_hand:
-                if card.startswith("10"):
-                    dealer_score += 10
-                elif card.startswith("A"):
-                    dealer_score += 1
-                else:
-                    dealer_score += scores[card[0]]
+
     else:
         break
 
