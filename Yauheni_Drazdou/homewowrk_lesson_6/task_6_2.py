@@ -18,5 +18,4 @@ def fun(*args):
         if move == 4:
             print("Частное")
             return a / b
-
 print(fun())
