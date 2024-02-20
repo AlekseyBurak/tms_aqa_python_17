@@ -1,6 +1,6 @@
 def count_symbols(input_string):
     symbol_count = {}
-    result_string = ""
+    result_string = " "
     for symbol in input_string:
         if symbol in symbol_count:
             symbol_count[symbol] += 1
