@@ -31,13 +31,13 @@ def validate_second_number(second_number: str, user_input: str) -> float:
     :param user_input: user option
     :return: validated second number
     """
-    while not second_number.isdigit():
-        print("\nError: The input value should be digit\n")
-        second_number = input("Enter the second number: ")
-
-        while second_number.isdigit() and float(second_number) == 0 and user_input == '4':
+    while (not second_number.isdigit()) or (second_number.isdigit() and float(second_number) == 0 and user_input == '4'):
+        if not second_number.isdigit():
+            print("\nError: The input value should be digit\n")
+        else:
             print("Error: You cannot divide by zero")
-            second_number = input("Enter the second number: ")
+
+        second_number = input("Enter the second number: ")
 
     return float(second_number)
 
