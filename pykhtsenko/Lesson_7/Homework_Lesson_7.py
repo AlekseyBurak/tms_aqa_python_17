@@ -1,6 +1,5 @@
 import random
 
-
 def isContainText(inp_list):
     isContainText = False
     for item in inp_list:
@@ -8,7 +7,6 @@ def isContainText(inp_list):
             isContainText = True
             break
     return isContainText
-
 
 def getUserInput(comp_list):
     isInputInProcess = True
