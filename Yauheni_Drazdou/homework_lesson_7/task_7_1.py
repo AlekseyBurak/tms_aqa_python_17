@@ -3,8 +3,8 @@
 def encode(x, y) -> str:
     """
     This function encodes any string into a text
-    with in which every letter becomes different letter
-    according to a particular step
+     in which every letter becomes different letter
+    according to a particular step (Caesar code)
     :param x: inputted text
     :param y: step within which every letter will be substituted with
     another one based on alphabet location
