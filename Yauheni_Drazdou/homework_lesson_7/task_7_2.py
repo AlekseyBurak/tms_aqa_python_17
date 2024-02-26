@@ -1,3 +1,5 @@
+#задача про рост Пети
+
 print("How many students are in a class?")
 how_many_st = int(input())
 a = []
