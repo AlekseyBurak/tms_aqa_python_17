@@ -16,7 +16,8 @@ def encode(x, y) -> str:
         if ord(i) >= 123 - y:
             i = chr(ord(i) - (26 - y))
             l2.append(i)
-        elif ord(i) == 32 or ord(i) == 33 or ord(i) == 44 or ord(i) == 63:
+        elif (ord(i) == 32 or ord(i) == 33 or ord(i) == 44 or
+              ord(i) == 46 or ord(i) == 63):
             l2.append(i)
         else:
             i = chr(ord(i) + y)
@@ -41,7 +42,8 @@ def decode(x,y) -> str:
         if 97 <= ord(i) < 97 + y:
             i = chr(ord(i) + (26 - y))
             l2.append(i)
-        elif ord(i) == 32 or ord(i) == 33 or ord(i) == 44 or ord(i) == 63:
+        elif (ord(i) == 32 or ord(i) == 33 or ord(i) == 44
+              or ord(i) == 46 or ord(i) == 63):
             l2.append(i)
         else:
             i = chr(ord(i) - y)
