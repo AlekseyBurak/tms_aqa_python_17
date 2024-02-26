@@ -1,8 +1,9 @@
-a = int(10)
-b = int(42)
-print(b//a)
-print("Сумма а и b"+" = "+str(a+b))
-print("Разность a и b"+" = "+str(a-b))
-print("Разность b и a"+" = "+str(b-a))
-print("Произведение a и b"+" = "+str(a*b))
-
+counter = 0
+for i in range(1, 11):
+    n = int(input())
+    if n % 2 == 0:
+        counter += 1
+if counter == 10:
+    print('YES')
+else:
+    print('NO')
