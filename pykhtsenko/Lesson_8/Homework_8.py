@@ -14,8 +14,8 @@ def decorator(func):
 def sum_numbers_letters(a, b, c):
     return a + b + c
 
-result_args = sum_numbers_letters(1, 20, -55)
-print(result_args)
+result_int = sum_numbers_letters(1, 20, -55)
+print(result_int)
 
 result_letters = sum_numbers_letters("Home", "Work", "done")
 print(result_letters)
