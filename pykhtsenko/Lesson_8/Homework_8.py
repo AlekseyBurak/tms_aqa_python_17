@@ -1,4 +1,5 @@
 def decorator(func):
+
     def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
         if isinstance(result, str):
