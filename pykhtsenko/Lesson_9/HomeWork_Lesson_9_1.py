@@ -8,7 +8,3 @@ class Line:
 
 sum_line = Line()
 print("length:", sum_line.length())
-
-
-
-
