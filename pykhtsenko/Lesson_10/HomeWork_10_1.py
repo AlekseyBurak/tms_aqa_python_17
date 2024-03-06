@@ -60,4 +60,4 @@ class User:
 			if book.reserve is True:
 				raise ValueError("Книга уже зарезервирована")
 			book.change_status(False)
-			
+#### доработать
