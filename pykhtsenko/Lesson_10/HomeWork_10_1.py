@@ -22,12 +22,12 @@ class Book:
 # изменение статуса резервирования
     def change_reserve(self, status: bool):
     	if self.reserve and status:
-    		raise ValueError('книга зарезервирована')
+    		raise ValueError("Книга зарезервирована")
     	self.reserve = status
 
     def change_status(self, status: bool):
     	if self.flag and status:
-    		raise ValueError('книга занята')
+    		raise ValueError("Книга занята")
     	self.flag = status
 
 
@@ -46,18 +46,18 @@ class User:
 
 	def get_book(self, book: Book):
 		if book.IBN in self.my_books:
-			raise ValueError('Книга уже у вас')
+			raise ValueError("Книга уже у вас")
 		book.change_status(True)
 		self.my_books.add(book.IBN)
 
 	def return_book(self, book: Book):
 		if not (book.flag and book.IBN in self.my_books):
-			raise ValueError('Не наша книга')
+			raise ValueError("Не наша книга")
 		book.change_status(False)
 		my_books.remove(book.IBN)
 
 	def reserve_book(self, book: Book):
 			if book.reserve is True:
-				raise ValueError('Книга уже зарезервирована')
+				raise ValueError("Книга уже зарезервирована")
 			book.change_status(False)
 			
