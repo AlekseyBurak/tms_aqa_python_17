@@ -58,3 +58,9 @@ with open("test.log", "r") as f:
         print(next(f), end='')
     # for index in range(100_000):
     #     f.write(f"{index} -- I am some valuable text. \n")
+
+
+
+# with open("Harry_Potter_1.txt", "w") as f:
+#     for index in range(3):
+#         f.write(f"{index} -- I won't lie. \n")
