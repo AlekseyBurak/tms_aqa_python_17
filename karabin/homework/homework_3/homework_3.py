@@ -1,4 +1,4 @@
- url = "www.my_site.com#about"
+# url = "www.my_site.com#about"
 # url = url.replace('#' , '/')
 # print(url)
 
