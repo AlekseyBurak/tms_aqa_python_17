@@ -59,7 +59,7 @@ class TestCalc(unittest.TestCase):
 
     def test_not_int(self):
         result = self.calc.calc(5.0, 2, "+")
-        self.assertEqual(result, -3.0)
+        self.assertEqual(result, -3)
 
 
 if __name__ == '__main__':
