@@ -16,7 +16,7 @@ class Calc:
             return "Error"
 
 
-class TestCalc(unittest.TestCase):
+class TestAddition(unittest.TestCase):
 
     def setUp(self):
         self.calc = Calc()
@@ -53,6 +53,16 @@ class TestCalc(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.calc.calc("av", 4, "+")
 
+
+class TestSubtraction(unittest.TestCase):
+
+    def setUp(self):
+        self.calc = Calc()
+        print("Start")
+
+    def tearDown(self):
+        print("End")
+
     def test_subtraction_return_type(self):
         self.assertIsInstance(self.calc.calc(3, 4, "-"), int)
 
@@ -72,6 +82,15 @@ class TestCalc(unittest.TestCase):
     def test_subtraction_none_input_type(self):
         with self.assertRaises(TypeError):
             self.calc.calc(4, None, "-")
+
+
+class TestMultiplication(unittest.TestCase):
+    def setUp(self):
+        self.calc = Calc()
+        print("Start")
+
+    def tearDown(self):
+        print("End")
 
     def test_multiplication_return_type(self):
         self.assertIsInstance(self.calc.calc(3, 4, "*"), int)
@@ -93,6 +112,16 @@ class TestCalc(unittest.TestCase):
     def test_multiplication_string_input_type(self):
         self.assertIsInstance(self.calc.calc("&!$/\\^*(", 4, "*"), int)
 
+
+class TestDivision(unittest.TestCase):
+
+    def setUp(self):
+        self.calc = Calc()
+        print("Start")
+
+    def tearDown(self):
+        print("End")
+
     def test_division_positive_numbers(self):
         self.assertEqual(self.calc.calc(10, 5, "/"), 2)
 
@@ -109,6 +138,16 @@ class TestCalc(unittest.TestCase):
     def test_division_string_input_type(self):
         with self.assertRaises(TypeError):
             self.calc.calc("av", 4, "/")
+
+
+class TestAdditionalCase(unittest.TestCase):
+
+    def setUp(self):
+        self.calc = Calc()
+        print("Start")
+
+    def tearDown(self):
+        print("End")
 
     def test_arguments_number(self):
         with self.assertRaises(TypeError):
