@@ -46,4 +46,4 @@ class TestApplication(unittest.TestCase):
     #     with self.assertRaises(TypeError):
     #         self.calc.calc(6, 2, 54)
     # С этим немного не разобрался)
-
+    # ...
