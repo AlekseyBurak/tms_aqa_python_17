@@ -24,7 +24,7 @@ class TestCalc(unittest.TestCase):
 
     def test_2(self):
         calc = Calc()
-        self.assertIsInstance(calc.concatinate(3, 4), int)
+        self.assertIsInstance(calc.concatinate(3, 5), int)
 
 
     # def test_3(self):

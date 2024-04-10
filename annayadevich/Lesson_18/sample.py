@@ -11,7 +11,7 @@ class TestStringMethods(unittest.TestCase):
 
     def test_split(self):
         s = 'hello world'
-        self.assertEqual(s.split(), ['hello', 'world'])
+        self.assertEqual(s.split(), ['hello1', 'world'])
         with self.assertRaises(TypeError):
             s.split(2)
 

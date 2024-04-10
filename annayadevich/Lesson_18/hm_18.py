@@ -48,7 +48,7 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(self.calc.calc(10, 3, "/"), 3)
 
     @unittest.skip("accepts only int")
-    def test_number_float(self):
+    def test_number1_float(self):
         with self.assertRaises(TypeError):
             self.calc.calc(7.2, 6.5, "+")
 
