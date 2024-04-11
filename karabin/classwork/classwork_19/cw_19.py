@@ -1,39 +1,51 @@
-def calc(a: int, b: int):
-    if isinstance(a, int) and isinstance(b, int):
-        return a + b
-    else:
-        return "Error"
+import pytest
 
 
-def test_1():
-    if calc(3 , 4) == 7:
-        print("OK")
-    else:
-        print("No OK")
+class Calc:
+
+    def concatinate(self, a: int, b: int):
+        if isinstance(a, int) and isinstance(b, int):
+            return a + b
+        else:
+            return "Error"
 
 
-def test_2():
-    if calc(3.0 , 4) == "Error":
-        print("OK")
-    else:
-        print("No OK")
-
-def test_3():
-    if calc(-4 , "5") == "Error":
-        print("OK")
-    else:
-        print("No OK")
-
-def test_4():
-    if calc(-4 , (1, 2)) == "Error":
-        print("OK")
-    else:
-        print("No OK")
+@pytest.fixture()
+def calc_init():
+    print("\nHello from pytest")
+    calc = Calc()
+    yield calc
+    print("\nHe he i'm done")
 
 
-test_1()
-test_2()
-test_3()
-test_4()
+@pytest.fixture(autouse=True)
+def connect_to_sql():
+    print("\nConnecting to SQL Data Base")
+    yield
+    print("\nDisConnecting from SQL Data Base")
 
 
+@pytest.fixture(scope="class", autouse=True)
+def class_scope():
+    print("\nClass setup")
+    yield
+    print("\nClass teardown")
+
+
+class TestPytestCalc:
+
+    def test_pytest_calc_1(self, calc_init):
+        calc = calc_init
+        result = calc.concatinate(4, 2)
+        assert result == 6
+        assert isinstance(result, int)
+        assert calc.concatinate(4, 2) == 6
+
+    # def test_data_in_sql(self):
+    #     assert True
+    #
+    # def test_data_in_postgressql(self):
+    #     assert True
+    #
+    # def test_data_in_mongo(self):
+    #     assert True
