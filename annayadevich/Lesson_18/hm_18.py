@@ -1,4 +1,6 @@
 import unittest
+
+
 class Calc:
     def calc(self, a: int, b: int, operation: str):
         if operation == "+":
@@ -11,6 +13,7 @@ class Calc:
             return a / b
         else:
             return "Error"
+
 
 class TestCalc(unittest.TestCase):
     def setUp(self):
@@ -51,7 +54,3 @@ class TestCalc(unittest.TestCase):
     def test_number1_float(self):
         with self.assertRaises(TypeError):
             self.calc.calc(7.2, 6.5, "+")
-
-
-
-
