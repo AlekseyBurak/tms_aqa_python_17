@@ -70,5 +70,3 @@ def test_invalid_operation_type(calculator):
 def test_invalid_operands(calculator):
     with pytest.raises(TypeError):
         calculator.calc(25.5, 10.5, "+")
-
-
