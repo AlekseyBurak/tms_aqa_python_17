@@ -1,48 +1,66 @@
-import unittest
+import pytest
 
 
-class Calc:
-    def calc(self, a: int, b: int, operation: str):
-        if operation == "+":
-            return a + b
-        elif operation == "-":
-            return a - b
-        elif operation == "*":
-            return a * b
-        elif operation == "/":
-            return a / b
-        else:
-            return "Error"
+class Calculator:
+    def div(self, a: [int, float], b: [int, float]) -> int | float:
+        if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+            raise TypeError("Both args should be numeric")
+        if b == 0:
+            raise ZeroDivisionError("Can't divide by zero")
+        return a / b
+
+    def add(self, a: [int, float], b: [int, float]) -> int | float:
+        if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+            raise TypeError("Both args should be numeric")
+        return a + b
+
+    def dif(self, a: [int, float], b: [int, float]) -> int | float:
+        if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+            raise TypeError("Both args should be numeric")
+        return a - b
+
+    def mult(self, a: [int, float], b: [int, float]) -> int | float:
+        if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+            raise TypeError("Both args should be numeric")
+        return a * b
 
 
-class TestCalc(unittest.TestCase):
+@pytest.fixture()
+def calc_init():
+    print("\nStart")
+    calc = Calculator()
+    yield calc
+    print("\nEnd")
 
-    def setUp(self):
-        self.calc = Calc()
 
-    @classmethod
-    def tearDownClass(cls):
-        print("End")
+class TestPytestCalc:
 
-    def test_1(self):
-        self.assertIsInstance(self.calc.calc(3, 5, "*"), int)
+    def test_1(self, calc_init):
+        calc = calc_init
+        assert calc.add(4, 2) == 6
 
-    @unittest.expectedFailure
-    def test_2(self):
-        self.assertEqual(self.calc.calc(6,10, "+"), 16)
+    def test_2(self, calc_init):
+        calc = calc_init
+        assert calc.dif(4, 2) == 2
 
-    @unittest.expectedFailure
-    def test_3(self):
-        self.assertFalse(self.calc.calc(3.0, 2, "*"), "Error")
+    def test_3(self, calc_init):
+        calc = calc_init
+        assert calc.mult(5, 4) == 20
 
-    @unittest.expectedFailure
-    def test_4(self):
-        self.assertFalse(self.calc.calc(3, 7, "*"), 22)
+    def test_4(self, calc_init):
+        calc = calc_init
+        with pytest.raises(ZeroDivisionError):
+            assert calc.div(5, 0)
 
-    def test_5(self):
-        self.assertLessEqual(self.calc.calc(10, 3, "*"), 32)
+    def test_5(self, calc_init):
+        calc = calc_init
+        assert isinstance(calc.dif(4, 3), int)
 
-    @unittest.expectedFailure
-    def test_6(self):
-        self.assertDictEqual(self.calc.calc(18, 9, "-"), 9, 1)
+    def test_6(self, calc_init):
+        calc = calc_init
+        assert isinstance(calc.dif(4.5, 3), float)
 
+    def test_7(self, calc_init):
+        calc = calc_init
+        with pytest.raises(TypeError):
+            assert calc.mult(3, "f")
