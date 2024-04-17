@@ -41,7 +41,7 @@ class TestAddition:
             calc_init.calc("av", 4, "+")
 
 
-class TestSubtraction():
+class TestSubtraction:
 
     def test_subtraction_return_type(self, calc_init):
         result = calc_init.calc(3, 4, "-")
@@ -66,7 +66,7 @@ class TestSubtraction():
             calc_init.calc(4, None, "-")
 
 
-class TestMultiplication():
+class TestMultiplication:
 
     def test_multiplication_return_type(self, calc_init):
         result = calc_init.calc(3, 4, "*")
@@ -92,7 +92,7 @@ class TestMultiplication():
         assert isinstance(result, int)
 
 
-class TestDivision():
+class TestDivision:
 
     def test_division_positive_numbers(self, calc_init):
         assert calc_init.calc(10, 5, "/") == 2
@@ -112,7 +112,7 @@ class TestDivision():
             calc_init.calc("av", 4, "/")
 
 
-class TestAdditionalCase():
+class TestAdditionalCase:
 
     def test_arguments_number(self, calc_init):
         with pytest.raises(TypeError):
