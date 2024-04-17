@@ -31,10 +31,10 @@ def test_beautiful_colour(design):
     assert design.colour_match(wall_colour="Белый", flour_colour="Коричневый") == "Ну красиво же"
 
 def test_same_colour(design):
-    assert design.colour_match(wall_colour="Оливковый", flour_colour="Оливковый") == "Это печально"
+    assert design.colour_match(wall_colour="Оливковый", flour_colour="Оливковый") == "1333"
 
 def test_beautiful_colour_fail(design):
-   # assert design.colour_match(wall_colour="Белый", flour_colour="Коричневый") == "Ну красиво же"
+   assert design.colour_match(wall_colour="Белый", flour_colour="Коричневый") == "Ну красиво же"
 
 def test_same_colour_fail(design):
     assert design.colour_match(wall_colour="Оливковый", flour_colour="Оливковый") == "Идеально"
@@ -46,6 +46,8 @@ def test_without_one_sign(design):
 def test_other_sign(design):
    assert design.colour_match(wall_colour="Оливковый", flour_colour="Темный дуб") == "Класс"
 
+def test_another_language(design):
+   assert design.colour_match(wall_colour="Black", flour_colour="White") == "Идеально"
 
 @pytest.mark.parametrize("wall_colour, flour_colour, expected_result", [
     pytest.param("Оливковый", "Темный дуб", "Идеально"),
