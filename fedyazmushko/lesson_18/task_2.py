@@ -45,9 +45,9 @@ class TestCalc(unittest.TestCase):
         self.assertIsInstance(self.calc.concatinate(3, 4), int)
 
 
-   @unittest.skip
-   def test_3(self):
-        self.assertEqual(self.calc.concatinate(3.0, 4), "Error")
+@unittest.skip
+def test_3(self):
+    self.assertEqual(self.calc.concatinate(3.0, 4), "Error")
 
     def tast_4(self):
 
@@ -61,4 +61,3 @@ class TestCalc(unittest.TestCase):
 
     def test_6(self):
         self.assertEqual(2 + "3", "5")
-
