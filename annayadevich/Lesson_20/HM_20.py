@@ -43,10 +43,10 @@ class TestPytestDesignCalculator:
         with pytest.raises(TypeError):
             calculator.colour_match(33313, 332.33)
 
-    @pytest.mark.parametrize("wall_colour, flour_colour, message", [
+    @pytest.mark.parametrize("wall_colour, flour_colour, message_1", [
         pytest.param("Оливковый", "Темный дуб", "Идеально", marks=[pytest.mark.smoke]),
         pytest.param("Оливковый", "Серый", "Ну красиво же", marks=[pytest.mark.smoke]),
         pytest.param("Серый", "Серый", "Это печально", marks=[pytest.mark.new_features_testing])
     ])
-    def test_param_test(self, wall_colour, flour_colour, message):
-        print(wall_colour, flour_colour, message)
+    def test_param_test(self, wall_colour, flour_colour, message_1):
+        print(wall_colour, flour_colour, message_1)
