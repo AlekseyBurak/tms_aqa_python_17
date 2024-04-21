@@ -1,5 +1,5 @@
 import pytest
-from HM_20 import DesignCalculator
+from test_hm_20 import DesignCalculator
 
 
 @pytest.fixture(autouse=True)
