@@ -3,4 +3,4 @@ def write_text(count):
         for i in range(count):
             file.write("I think Harry Potter is overrated, please don't hate me\n")
 
-write_text(2)
+write_text(15)
