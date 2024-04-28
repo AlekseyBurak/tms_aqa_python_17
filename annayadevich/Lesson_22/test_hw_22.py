@@ -105,7 +105,7 @@ def test_multi_select(driver):
     driver.find_element(By.XPATH, '//*[@id="submit-id-submit"]').click()
 
 
-# Text area
+# Text area 1
 def test_text_area(driver):
     url = "https://www.qa-practice.com/elements/textarea/single"
     driver.get(url)
