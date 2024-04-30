@@ -4,9 +4,9 @@ from Yauheni_Drazdou.homework_lesson_23.pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 
 BN_ADD_TO_CART = By.PARTIAL_LINK_TEXT, 'В корзину'
-BN_GO_TO_CART = By.XPATH, "//*[@class='button-style button-style_another button-style_base-alter product-recommended__button']"
+BN_GO_TO_CART = By.XPATH, "//*[contains(text(), 'Перейти в корзину')]']"
 
-TX_PRICE = By.XPATH, "//*[@class='offers-description__link offers-description__link_nodecor js-description-price-link']"
+TX_PRICE = By.XPATH, "//*[contains(@class, 'js-description-price-link')]"
 TX_TITLE = By.XPATH, "//*[@class='catalog-masthead__title js-nav-header']"
 
 class ItemPage(BasePage):
