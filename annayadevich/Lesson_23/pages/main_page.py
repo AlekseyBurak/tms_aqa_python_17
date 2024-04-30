@@ -1,6 +1,9 @@
 from annayadevich.Lesson_23.locators.main_page_locators import CURR_INFO, IN_SEARCH_FIELD, IFRAME, LI_SEARCH_RESULT
 from annayadevich.Lesson_23.pages.base_page import BasePage
 
+from annayadevich.Lesson_23.locators.main_page_locators import (CURR_INFO, IN_SEARCH_FIELD, IFRAME, BN_CATALOG)
+from annayadevich.Lesson_23.pages.base_page import BasePage
+
 
 class MainPage(BasePage):
 
@@ -35,3 +38,6 @@ class MainPage(BasePage):
     def check_dollar_rate_visible(self):
         rate = self.get_current_currency_rate()
         assert "$" in rate, f"Description, this test failed because of\n{rate=}"
+
+    def click_bn_catalog(self):
+        self.click(BN_CATALOG)
