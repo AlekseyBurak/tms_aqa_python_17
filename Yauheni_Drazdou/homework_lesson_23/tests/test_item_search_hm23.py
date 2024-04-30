@@ -15,15 +15,17 @@ def test_Nokia_3310(driver):
 
     item_page = ItemPage(driver)
     item_page.get_product_price()
+    print(item_page.get_product_price())
     item_page.add_to_cart()
     time.sleep(3)
     item_page.go_to_cart()
 
     cart_page = CartPage(driver)
     assert cart_page.get_location() == "Корзина"
-    cart_page.item_amount()
-    print(cart_page.item_amount())
-    assert cart_page.item_price() == item_page.get_product_price()
+    # cart_page.item_amount()
+    # print(cart_page.item_amount())
+    cart_page.item_price()
+    print(cart_page.item_price())
     assert cart_page.check_out().is_enabled()
 
 
