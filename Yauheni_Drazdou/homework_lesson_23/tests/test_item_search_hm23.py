@@ -24,10 +24,8 @@ def test_Nokia_3310(driver):
     assert cart_page.get_location() == "Корзина"
     cart_page.item_amount()
     print(cart_page.item_amount())
-    assert cart_page.item_amount() == "за 1 товар"
+    assert cart_page.item_amount() == f"{item_page.get_product_price()} за 1 товар"
     assert cart_page.check_out().is_enabled()
-    cart_page.item_price()
-    print(cart_page.item_price())
 
 
 
