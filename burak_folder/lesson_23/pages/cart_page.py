@@ -10,7 +10,7 @@ class CartPage(BasePage):
 
     def check_cart_items_amount(self, num_items: int):
         cart_amount = self.text(TXT_CART_PRICE)
-        expected_amount = f"{num_items} товар"
+        expected_amount = f" {num_items} товар"
         assert expected_amount in cart_amount, f"Amounts are not equal, {expected_amount=} != {cart_amount=}"
 
     def check_cart_title(self):
