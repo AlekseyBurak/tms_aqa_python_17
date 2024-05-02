@@ -15,4 +15,6 @@ class TestPlayStation:
         main_page.chose_from_iframe_by_index()
 
 
+
+
         #pytest burak_folder/lesson_23/test/test_hw.py --reruns 3 --reruns-delay 1 - для реранов тестов 
