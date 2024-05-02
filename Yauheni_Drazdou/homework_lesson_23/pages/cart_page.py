@@ -4,11 +4,11 @@ from selenium.webdriver.common.by import By
 BN_CHECK_OUT = By.XPATH, "//*[contains(text(),'Перейти к оформлению')]"
 
 
-LI_ITEM_PRICE = By.XPATH, "(//*[contains(@class, 'cart-form__description_condensed-other')])[1]"
+LI_ITEM_PRICE = By.XPATH, "//*[contains(@class, 'cart-form__description_ellipsis cart-form__description_condensed')]"
 TX_BASKET = By.XPATH, "(//*[contains(text(),'Корзина')])[2]"
 
 
-FD_AMOUNT = By.XPATH, "//*[contains(text(),'товар на сумму')]"
+FD_AMOUNT = By.XPATH, "//*[contains(@class, 'art-form__description_nowrap')]"
 
 class CartPage(BasePage):
 
