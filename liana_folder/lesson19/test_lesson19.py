@@ -1,4 +1,5 @@
 import pytest
+import allure
 
 
 class Calc:
@@ -17,6 +18,10 @@ def class_scope():
 
 class TestPytestCalc:
 
+    @allure.title("test_title_1")
+    @allure.id("12345")
+    @allure.feature("Feature 123")
+    @allure.description("RQ1")
     def test_pytest_calc_1(self):
         calc = Calc()
         result = calc.concatinate(4, 2)

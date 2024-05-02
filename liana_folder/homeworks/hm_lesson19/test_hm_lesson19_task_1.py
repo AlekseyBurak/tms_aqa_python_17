@@ -1,4 +1,6 @@
 import pytest
+import allure
+
 
 class Calc:
     def calc(self, a: int, b: int, operation: str):
@@ -16,10 +18,18 @@ class Calc:
 
 class TestPytestCalc:
 
+    @allure.title("test_title_1")
+    @allure.id("12345")
+    @allure.feature("Feature 123")
+    @allure.description("RQ1")
     @pytest.mark.smoke
     def test_operation_addition(self, calculator_init):
         assert calculator_init.calc(4, 2, "+") == 6
 
+    @allure.title("test_title_2")
+    @allure.id("123456")
+    @allure.feature("Feature 1234")
+    @allure.description("RQ2")
     @pytest.mark.smoke
     def test_operation_subtraction(self, calculator_init):
         assert calculator_init.calc(4, 2, "-") == 2
@@ -47,6 +57,7 @@ class TestPytestCalc:
     @pytest.mark.critical_pass
     def test_subtraction_1(self, calculator_init):
         assert calculator_init.calc(-10, 1, "-") == -11
+
     @pytest.mark.critical_pass
     def test_subtraction_2(self, calculator_init):
         assert calculator_init.calc(10, -1, "-") == 11
@@ -115,9 +126,3 @@ class TestPytestCalc:
     def test_operand_b_float(self, calculator_init):
         with pytest.raises(TypeError):
             assert calculator_init.calc(2, 1.0, "/")
-
-
-
-
-
-
