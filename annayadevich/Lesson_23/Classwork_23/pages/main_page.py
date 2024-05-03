@@ -1,8 +1,7 @@
-from annayadevich.Lesson_23.locators.main_page_locators import CURR_INFO, IN_SEARCH_FIELD, IFRAME, LI_SEARCH_RESULT
-from annayadevich.Lesson_23.pages.base_page import BasePage
+from annayadevich.Lesson_23.Classwork_23.locators.main_page_locators import LI_SEARCH_RESULT
 
-from annayadevich.Lesson_23.locators.main_page_locators import (CURR_INFO, IN_SEARCH_FIELD, IFRAME, BN_CATALOG)
-from annayadevich.Lesson_23.pages.base_page import BasePage
+from annayadevich.Lesson_23.Classwork_23.locators.main_page_locators import (CURR_INFO, IN_SEARCH_FIELD, IFRAME, BN_CATALOG)
+from annayadevich.Lesson_23.Classwork_23.pages.base_page import BasePage
 
 
 class MainPage(BasePage):

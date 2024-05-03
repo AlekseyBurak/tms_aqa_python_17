@@ -1,5 +1,5 @@
-from annayadevich.Lesson_23.locators.catalog_page_locators import BN_ONLINER_PRIME, BN_ZOO, BN_ZOO_COSMETICS
-from annayadevich.Lesson_23.pages.base_page import BasePage
+from annayadevich.Lesson_23.Classwork_23.locators.catalog_page_locators import BN_ONLINER_PRIME, BN_ZOO, BN_ZOO_COSMETICS
+from annayadevich.Lesson_23.Classwork_23.pages.base_page import BasePage
 from selenium.webdriver.common.action_chains import ActionChains
 
 

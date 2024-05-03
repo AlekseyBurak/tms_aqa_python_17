@@ -1,7 +1,7 @@
 
 import pytest
 
-from annayadevich.Lesson_23.pages.main_page import MainPage
+from annayadevich.Lesson_23.Classwork_23.pages.main_page import MainPage
 
 
 @pytest.fixture(autouse=True)
