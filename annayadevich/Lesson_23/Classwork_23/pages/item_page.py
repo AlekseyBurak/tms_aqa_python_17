@@ -25,8 +25,8 @@ class ItemPage(BasePage):
         self.driver.execute_script("window.scrollTo(0, 200);")
         self.click(SEL_MANUF)
 
-    # def click_yo(self):
-    #     self.click(BOX_YO)
-    #
-    # def check_yo_clicked(self):
-    #     self.wait_for(BOX_YO).is_selected()
+    def click_yo(self):
+        self.click(BOX_YO)
+
+    def check_yo_clicked(self):
+        self.wait_for(BOX_YO).is_selected()
