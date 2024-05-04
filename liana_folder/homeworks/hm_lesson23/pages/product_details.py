@@ -1,6 +1,6 @@
-from liana_folder.lesson23.pages.base_page import BasePage
-from liana_folder.homeworks.hm_lesson23.locators.locators import HEADER, BT_ADD_TO_CART, SIDEBAR, BN_GO_TO_CART, \
-    BN_ACCEPT, BN_GO_TO_CHECKOUT
+from .base_page import BasePage
+from ..locators.locators import HEADER, BT_ADD_TO_CART, SIDEBAR, BN_GO_TO_CART, BN_ACCEPT, BN_GO_TO_CHECKOUT, \
+    HEADER_PRODUCT
 
 
 class ProductDetails(BasePage):
@@ -38,7 +38,11 @@ class ProductDetails(BasePage):
 
     def go_to_checkout(self):
         return self.get_go_to_checkout_button.click()
-
+    @property
+    def get_title_product(self):
+        self.wait_for(HEADER_PRODUCT)
+        title = self.driver.find_element(*HEADER_PRODUCT)
+        return title.text
 
 
 

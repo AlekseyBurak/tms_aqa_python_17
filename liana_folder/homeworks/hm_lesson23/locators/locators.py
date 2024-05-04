@@ -9,4 +9,8 @@ SIDEBAR = By.XPATH, '//div[@class="product-recommended__sidebar-overflow"]'
 BN_GO_TO_CART = By.XPATH, '//a[@href="https://cart.onliner.by"][contains(text(), "Перейти в корзину")]'
 BN_ACCEPT = By.XPATH, '//p[contains(text(), "Соглашаюсь")]'
 BN_GO_TO_CHECKOUT = By.XPATH, '//a[contains(text(), "Перейти к оформлению")]'
+# BN_GO_TO_CHECKOUT = By.XPATH, '//*[@class="button-style button-style_small cart-form__button button-style_primary"]'
 HEADER_CHECKOUT = By.XPATH, '//*[contains(text(), "Оформление заказа")]'
+HEADER_CART = (By.XPATH,
+               '//*[@class="cart-form__title cart-form__title_base cart-form__title_nocondensed cart-form__title_condensed-special"]')
+HEADER_PRODUCT = By.XPATH, '//*[@class="catalog-masthead__title js-nav-header"]'

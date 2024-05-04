@@ -1,5 +1,5 @@
-from liana_folder.lesson23.pages.base_page import BasePage
-from liana_folder.homeworks.hm_lesson23.locators.locators import IN_SEARCH_FIELD, IFRAME, SEARCH_RESULT
+from .base_page import BasePage
+from ..locators.locators import IN_SEARCH_FIELD, IFRAME, SEARCH_RESULT
 
 
 class MainPage(BasePage):

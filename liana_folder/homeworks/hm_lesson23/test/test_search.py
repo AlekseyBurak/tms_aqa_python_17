@@ -1,6 +1,6 @@
 import pytest
 
-from liana_folder.homeworks.hm_lesson23.pages.main_page import MainPage
+from ..pages.main_page import MainPage
 
 
 @pytest.fixture(autouse=True)
