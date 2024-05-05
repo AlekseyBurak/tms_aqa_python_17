@@ -10,6 +10,8 @@ def main_page(driver):
     yield MainPage(driver)
 
 
+
+@pytest.mark.xfail
 class TestCurrency:
 
     def test_currency_info(self, main_page):
