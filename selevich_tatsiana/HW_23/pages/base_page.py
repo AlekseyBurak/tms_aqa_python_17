@@ -2,6 +2,7 @@ from typing import Tuple
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import allure
 
 
 class BasePage:
@@ -17,12 +18,6 @@ class BasePage:
         return element
 
     def text(self, locator: Tuple[str, str], timeout: int = 5) -> str:
-        """
-        RETURN TEXT
-        :param locator:
-        :param timeout:
-        :return:
-        """
         element = WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
         return element.text
 
