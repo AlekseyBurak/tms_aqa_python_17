@@ -22,7 +22,7 @@ def test_search_Nokia_3310(driver):
     item_page.go_to_cart()
 
     cart_page = CartPage(driver)
-    assert cart_page.get_location() == "Корзина"
+    assert driver.title == "Корзина заказов onliner.by"
     driver.implicitly_wait(10)
     cart_page.item_amount()
     cart_page.item_price()
