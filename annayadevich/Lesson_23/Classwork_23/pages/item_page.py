@@ -1,9 +1,16 @@
-from annayadevich.Lesson_23.locators.item_locators import BN_FIRST_ADD_TO_CART, BN_GO_TO_CART_PRODUCT_REC, \
-    TXT_FIRST_PRICE, BOX_YO, SEL_MANUF
-from annayadevich.Lesson_23.pages.base_page import BasePage
+from annayadevich.Lesson_23.Classwork_23.locators.item_locators import BN_FIRST_ADD_TO_CART, BN_GO_TO_CART_PRODUCT_REC, \
+    TXT_FIRST_PRICE, SEL_MANUF
+
+from annayadevich.Lesson_23.Classwork_23.pages.base_page import BasePage
+
+
 
 
 class ItemPage(BasePage):
+
+    def __init__(self, driver):
+        super().__init__(driver)
+        self.item_price = None
 
     def add_to_cart(self):
         self.click(BN_FIRST_ADD_TO_CART)

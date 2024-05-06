@@ -1,5 +1,5 @@
-from annayadevich.Lesson_23.locators.cart_locators import TXT_CART_PRICE, BN_SUBMIT
-from annayadevich.Lesson_23.pages.base_page import BasePage
+from annayadevich.Lesson_23.Classwork_23.locators.cart_locators import TXT_CART_PRICE, BN_SUBMIT
+from annayadevich.Lesson_23.Classwork_23.pages.base_page import BasePage
 
 
 class CartPage(BasePage):
@@ -12,6 +12,8 @@ class CartPage(BasePage):
         cart_amount = self.text(TXT_CART_PRICE)
         expected_amount = f"{num_items} товар"
         assert expected_amount in cart_amount, f"Amounts are not equal, {expected_amount=} != {cart_amount=}"
+        
+
 
     def check_cart_title(self):
         page_title = self.driver.title
