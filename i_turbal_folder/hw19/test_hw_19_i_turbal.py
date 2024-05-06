@@ -1,5 +1,6 @@
 import unittest
 import pytest
+import allure
 
 
 class Calc:
@@ -24,12 +25,20 @@ def calc():
 @pytest.mark.addition
 class TestOperationPlus:
 
+    @allure.title('Title1')
+    @allure.description('123')
+    @allure.feature('Long')
     @pytest.mark.smoke
     def test_int(self, calc):
-        result = calc.calc(1,2,'+')
+        with allure.step("Step1"):
+            result = calc.calc(1,2,'+')
         assert result == 3
-        assert isinstance(result, int)
+        with allure.step('Step2'):
+            assert isinstance(result, int)
 
+    @allure.title('Title1')
+    @allure.id('123')
+    @allure.feature("not long")
     @pytest.mark.xfail
     def test_float(self, calc):
         with pytest.raises(TypeError):

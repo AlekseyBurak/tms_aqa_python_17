@@ -15,6 +15,7 @@ print(driver.title)
 print(driver.current_url)
 class Inputs:
     driver.get('https://www.qa-practice.com/elements/input/simple')
+    driver.implicitly_wait(5)
     text_imbut = driver.find_element(By.ID, 'id_text_string')
     text_imbut.send_keys('text')
     text_imbut.submit()

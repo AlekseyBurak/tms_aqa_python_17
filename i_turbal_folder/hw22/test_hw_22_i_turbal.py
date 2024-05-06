@@ -135,6 +135,7 @@ class TestAlerts:
 #         link = driver.find_element(By.XPATH, '//*[contains(text(), "Visit the homepage")]')
 #         link.click()
 #         assert
+#         assert
 
 
 
