@@ -18,6 +18,15 @@ class MainPage(BasePage):
     def search_input(self, item: str):
         self.search_field.send_keys(item)
 
+    @property
+    def research(self):
+        return self.driver.find_element(*ITEM_SEARCH_FIELD_LOCATOR)
+
+    def research_input(self, item: str):
+        self.research.send_keys(item)
+
+
+
 
     def choose_from_iframe_by_index(self):
         iframe = self.wait_for(IFRAME)

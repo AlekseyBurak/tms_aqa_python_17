@@ -10,3 +10,11 @@ def driver():
     driver = webdriver.Chrome(options=chrome_options)
     driver.get("https://www.onliner.by")
     yield driver
+
+@pytest.fixture
+def driver2():
+    chrome_options = Options()
+    chrome_options.add_argument("--start-maximized")
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.get("https://cart.onliner.by/")
+    yield driver

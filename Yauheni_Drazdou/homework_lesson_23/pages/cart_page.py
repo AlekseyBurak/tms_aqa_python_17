@@ -1,14 +1,16 @@
 from Yauheni_Drazdou.homework_lesson_23.pages.base_page import BasePage
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
+
 
 BN_CHECK_OUT = By.XPATH, "//*[contains(text(),'Перейти к оформлению')]"
 
 
-LI_ITEM_PRICE = By.XPATH, "(//*[contains(@class, 'cart-form__description')])[9]"
+LI_ITEM_PRICE = By.XPATH, "(//*[contains(@class, 'cart-form__description')])[9]" #item price
 TX_BASKET = By.XPATH, "(//*[contains(text(),'Корзина')])[2]"
 
 
-FD_AMOUNT = By.XPATH, "(//*[contains(@class, 'cart-form__description cart-form__description_base-alter')])[3]"
+FD_AMOUNT = By.XPATH, "//span[contains(text(), 'товар')]"
 class CartPage(BasePage):
 
     def check_out(self):

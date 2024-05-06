@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 BN_ADD_TO_CART = By.PARTIAL_LINK_TEXT, 'В корзину'
 BN_GO_TO_CART = By.XPATH, "//*[contains(text(), 'Перейти в корзину')]"
 
-TX_PRICE = By.XPATH, "//*[contains(@class, 'js-description-price-link')]"
+TX_PRICE = By.XPATH, "//div[@class='product-aside__offers']//span"
 TX_TITLE = By.XPATH, "//*[@class='catalog-masthead__title js-nav-header']"
 
 class ItemPage(BasePage):
