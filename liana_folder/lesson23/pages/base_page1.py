@@ -36,8 +36,5 @@
 #     def input(self):
 #         pass
 #
-#     def get_title(self):
-#         pass
-#
 #     def select(self):
 #         pass
