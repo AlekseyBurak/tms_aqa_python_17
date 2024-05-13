@@ -1,4 +1,13 @@
+import allure
+
+
 class TestAddToBucket:
+    @allure.feature("Bucket")
+    @allure.title("Title example")
+    @allure.id("1")
+    @allure.epic("J-1")
+    @allure.severity("Major")
+    @allure.story("JQ-1")
     def test_bucket(self, main_page, item_page, cart_page):
         main_page.input_into_search_field('Iphone')
         main_page.chose_from_iframe_by_index()
