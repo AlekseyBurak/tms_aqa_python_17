@@ -1,4 +1,5 @@
-
+import allure
+import time
 class DecorTasteError(Exception):
     pass
 class DesignCalculator:
@@ -19,8 +20,16 @@ import pytest
 def design():
     return DesignCalculator()
 
+@allure.title("LOOOOOOOO")
+@allure.id("1234")
+@allure.feature("kjkkjkj")
 @pytest.mark.skip
 def test_invalid_input(design):
+    with allure.step(
+
+
+            "Step one"):
+        time.sleep(1)
     assert design.colour_match(wall_colour="12345", flour_colour="333333") == "Идеально"
 
 @pytest.mark.smoke
