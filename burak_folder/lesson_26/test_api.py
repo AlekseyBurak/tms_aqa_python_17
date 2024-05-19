@@ -1,5 +1,4 @@
 import requests
-import json
 
 URL = "https://petstore.swagger.io/v2/"
 
@@ -49,7 +48,6 @@ def test_add_pet():
 
 
 def test_delete():
-
     payload = {
         "id": 0,
         "category": {
@@ -88,6 +86,7 @@ def test_delete():
         headers={"accept": "application/json"}
     )
     assert get_response.status_code == 404
+
 
 def test_update_pet():
     payload = {
@@ -159,5 +158,3 @@ def test_params():
         headers={"accept": "application/json"}
     )
     assert get_response.status_code == 200
-    print()
-    print(get_response.url)
