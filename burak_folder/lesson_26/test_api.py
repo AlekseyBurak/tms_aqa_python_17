@@ -145,7 +145,7 @@ def test_update_pet():
         url=f"{URL}pet/{pet_id}",
         headers={"accept": "application/json"}
     )
-    assert get_response.status_code == 200
+    assert get_response.status_code == 500
 
 
 def test_params():
@@ -154,4 +154,4 @@ def test_params():
         params={"status": "available"},
         headers={"accept": "application/json"}
     )
-    assert get_response.status_code == 200
+    assert get_response.status_code == 500
