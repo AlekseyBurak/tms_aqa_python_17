@@ -10,8 +10,6 @@ def main_page(driver):
 
 class TestPlayStation:
 
-    def test_play_station(self, main_page):
-        breakpoint()
-        main_page.input_into_search_field("Play station 5")
-        main_page.chose_from_iframe_by_index(index=1)
-        breakpoint()
+    def test_play_station(self, main_page: MainPage):
+        main_page.input_into_search_field("Playstation 5")
+        main_page.chose_from_iframe_by_index()

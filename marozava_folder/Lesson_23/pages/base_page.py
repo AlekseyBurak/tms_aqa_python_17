@@ -25,6 +25,9 @@ class BasePage:
         element = WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
         return element.text
 
+    def wait_for(self, locator: Tuple[str, str], timeout: int = 5):
+        return WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
+
 
 
     def scroll_to(self):
